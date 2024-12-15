@@ -1,0 +1,166 @@
+<%- include('partials/header', { user: user }) %>
+
+
+    <div class="main-content">
+        <h1>Profile of <%= user.username %>
+        </h1>
+        <p>Joined on: <%= new Date(user.createdAt).toDateString() %>
+        </p>
+
+      
+        <div class="profile-card">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec feugiat purus. Integer euismod ex ut
+                libero dignissim, eu dictum augue bibendum.</p>
+
+            <div class="button-container">
+              
+                <a href="/logout" class="action-button">Logout</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            background: linear-gradient(90deg, rgba(93, 142, 251, 1) 0%, rgba(93, 142, 251, 1) 30%, rgba(0, 212, 255, 1) 100%);
+            color: #F6F6F6;
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        header a {
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header a:hover {
+            background-color: rgba(93, 142, 251, 0.8);
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        
+        .main-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+       
+        .main-content p {
+            font-size: 1.2rem;
+            color: #f1f1f1;
+            margin-bottom: 30px;
+        }
+
+        
+        .profile-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+            margin-top: 40px;
+            color: #f6f6f6;
+            text-align: left;
+        }
+
+        .profile-card h2 {
+            font-size: 2rem;
+            color: #5D8EFB;
+            margin-bottom: 15px;
+        }
+
+        .profile-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+       
+        .action-button {
+            background: #5D8EFB;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+       
+        .action-button:hover {
+            background-color: rgba(93, 142, 251, 0.8);
+            transform: scale(1.05);
+        }
+
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-card h2 {
+                font-size: 1.6rem;
+            }
+
+            .profile-card p {
+                font-size: 1rem;
+            }
+
+            .action-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+
+        .main-content {
+            margin-bottom: 30px;
+        }
+    </style>
